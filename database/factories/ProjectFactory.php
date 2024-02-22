@@ -17,7 +17,7 @@ class ProjectFactory extends Factory
     public function definition()
     {
         return [
-            'name'=> fake()->unique()-> words(3, true),
+            'name'=> fake()->unique()->words(3, true),
             'start_date'=>fake()->dateTimeBetween('-1 year', 'now'),
             'end_date'=>fake()->dateTimeBetween('now', '+1 year'),
             'status'=>fake()->randomElement(['In Progress', 'Complete', 'Suspended']),
